@@ -3,6 +3,13 @@ import java.util.Scanner;
 
 public class Zookeeper {
     public static void main(String[] args) {
+        System.out.println("What camera do you want to see: ");
+        System.out.println("1. Camel/n2.Hippo");
+        Scanner input = new Scanner(System.in);
+        int cameraChoice=input.nextInt();
+        if(cameraChoice==1){
+            printCamel();
+        }
         String animalType = "Camel";
         String time = "4:37PM";
         double habitatTemp = Math.random();
