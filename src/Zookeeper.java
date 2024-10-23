@@ -1,22 +1,29 @@
 import java.io.File;
 import java.util.Scanner;
+import java.util.Random;
+import java.time.LocalTime;
 
 public class Zookeeper {
     public static void main(String[] args) {
         System.out.println("What camera do you want to see: ");
-        System.out.println("1. Camel/n2.Hippo");
-        Scanner input = new Scanner(System.in);
-        int cameraChoice=input.nextInt();
-        if(cameraChoice==1){
+        System.out.println("1. Camel/n2.Hippo/n3.Peter/n4.Lynx");
+        int cameraChoice = input.nextInt();
+        if(cameraChoice == 1){
             printCamel();
         }
+        else if(cameraChoice == 2){
+            ;
+        }
+        Scanner input = new Scanner(System.in);
+        Random random = new Random();
+        LocalTime time = LocalTime.now();
+
         String animalType = "Camel";
-        String time = "4:37PM";
-        double habitatTemp = Math.random();
+        double habitatTemp = 50.0+(100.0-50.0)* random.nextDouble();
 
         System.out.println("Animal type: " + animalType);
         System.out.println("Current time: " + time);
-        System.out.println("Habitat temperature: " + habitatTemp+"F");
+        System.out.printf("Habitat temperature: %.2f%n ", habitatTemp);
 
         String camel = """
             Look at our camel
